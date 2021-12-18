@@ -1,0 +1,17 @@
+.navBar {
+  height: 100%;
+  background-color: #550DC9FF;
+  grid-area: n;
+}
+
+.icon {
+  margin-top: 1rem;
+  background-color: #440BA0FF;
+  text-align: center;
+}
+
+.icon svg {
+  color: white;
+  height: 1.5rem;
+  width: 1.5rem;
+}

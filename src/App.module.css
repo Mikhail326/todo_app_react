@@ -1,0 +1,22 @@
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    'h h'
+    'n c';
+    grid-template-columns: 35px 1fr;
+    grid-template-rows: 70px 1fr;
+}
+.contentContainer {
+  display: flex;
+  gap: 2rem;
+  width: 80%;
+  margin: 0 auto;
+  grid-area: c;
+  padding: 1rem;
+}
+@media(max-width: 1024px) {
+  .contentContainer {
+    display: block;
+  }
+}

@@ -1,0 +1,55 @@
+button svg {
+    width: 1rem;
+    height: 1rem;
+}
+.editBtn {
+    padding: 0.1rem;
+    color: #597DFBFF;
+    background-color: transparent;
+    border: none;
+}
+.deleteBtn {
+    padding: 0;
+    color: #FF6363FF;
+    background-color: transparent;
+    border: none;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+.totalTodo {
+    font-size: 0.7rem;
+    margin-top: 0.5rem;
+    display: inline-block;
+    padding: 0.5rem;
+    background-color: #FEF6FFFF;
+    color: #550DC9FF;
+    border: 1px solid white;
+    border-radius: 3px;
+}
+
+.todoList {
+    margin-top: 1rem;
+}
+.itemTodo {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    padding: 0 0.3rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.2rem;
+    height: 2rem;
+    border: 1px solid #ECECECFF;
+    border-radius: 3px;
+}
+.titleTodo:focus {
+    outline: none;
+    border: none;
+}
+.titleTodo {
+    width: 100%;  
+}

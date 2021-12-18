@@ -1,0 +1,37 @@
+.header {
+  padding: 0 1rem;
+  grid-area: h;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  box-shadow: 0px 5px 5px #EEEEEEFF;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+.title {
+  width: 100%;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.icon svg {
+  width: 1.3rem;
+  height: 1.3rem;
+  color: blue;
+}
+
+.icon span {
+  display: block;
+  font-size: 0.45rem;
+  font-weight: 600;
+}
+
