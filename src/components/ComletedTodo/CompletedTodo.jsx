@@ -1,12 +1,12 @@
 import s from './CompletedTodo.module.css'
 import { RiDeleteBin6Line } from 'react-icons/ri'
 
-export const CompletedTodo = ({ todo, deleteTodoItem, toggleCompleted }) => {
+export const CompletedTodo = ({ filterTodo, deleteTodoItem, toggleCompleted }) => {
   
-  const filteredTodo = todo.filter(t => t.completed === true)
+  const filteredTodo = filterTodo.filter(t => t.completed === true)
 
   return (
-    <div>
+    <div className={s.wrapperCompletedTodo}>
       <h4>Completed ({filteredTodo.length})</h4>
       {filteredTodo.map(t => {
         const { title, id, completed } = t;

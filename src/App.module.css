@@ -15,6 +15,7 @@
   grid-area: c;
   padding: 1rem;
 }
+
 @media(max-width: 1024px) {
   .contentContainer {
     display: block;

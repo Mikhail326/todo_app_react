@@ -2,7 +2,7 @@ import s from './TodoCard.module.css'
 import { RiDeleteBin6Line } from 'react-icons/ri'
 import { FiEdit, FiSave } from 'react-icons/fi'
 
-export const TodoCard = ({ todo,
+export const TodoCard = ({ filterTodo,
   deleteTodoItem,
   editTodo,
   saveTodo,
@@ -14,7 +14,7 @@ export const TodoCard = ({ todo,
   const handleChange = (e) => {
     setValue(e.target.value)
   }
-  const filteredTodo = todo.filter(t => t.completed === false)
+  const filteredTodo = filterTodo.filter(t => t.completed === false)
   return (
     <div className={s.todoList}>
       <h4>To do ({filteredTodo.length})</h4>

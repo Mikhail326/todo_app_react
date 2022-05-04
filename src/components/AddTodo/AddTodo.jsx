@@ -3,7 +3,8 @@ import s from './AddTodo.module.css'
 import { postDataAPI } from '../../api'
 import { useEffect } from 'react'
 
-export const AddTodo = ({ getData }) => {
+export const AddTodo = ({ getData}) => {
+
   const [value, setValue] = useState('')
   const [stateErorr, setStateErorr] = useState(false)
   const [erorr, setErorr] = useState('field cannot be empty')

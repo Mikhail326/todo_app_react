@@ -1,10 +1,9 @@
 import s from './TodoList.module.css'
 import { useState } from 'react'
-import { CompletedTodo } from '../ComletedTodo/CompletedTodo'
 import { TodoCard } from '../TodoCard/TodoCard'
 import { patchDataAPI } from '../../api'
 
-export const TodoList = ({ todo, getData, deleteTodoItem, toggleCompleted }) => {
+export const TodoList = ({ filterTodo, getData, deleteTodoItem, toggleCompleted }) => {
 
   const [edit, setEdit] = useState(null)
   const [value, setValue] = useState(null)
@@ -21,17 +20,14 @@ export const TodoList = ({ todo, getData, deleteTodoItem, toggleCompleted }) => 
 
   return (
     <div>
-      <span className={s.totalTodo}>Total: {todo.length}</span>
-      <TodoCard todo={todo}
+      <span className={s.totalTodo}>Total: {filterTodo.length}</span>
+      <TodoCard filterTodo={filterTodo}
         edit={edit}
         value={value}
         setValue={setValue}
         deleteTodoItem={deleteTodoItem}
         editTodo={editTodo}
         saveTodo={saveTodo}
-        toggleCompleted={toggleCompleted} />
-      <CompletedTodo todo={todo}
-        deleteTodoItem={deleteTodoItem}
         toggleCompleted={toggleCompleted} />
     </div>
   )

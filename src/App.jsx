@@ -10,7 +10,15 @@ import { CompletedTodo } from './components/ComletedTodo/CompletedTodo';
 const App = () => {
 
   const [todo, setTodo] = useState([])
-  
+  const [filterTodo, setFilterTodo] = useState(todo)
+
+  const onHandler = (userId) => {
+    let data = [...todo]
+    if (userId) {
+      data = data.filter(el => el.userId === userId)
+    }
+    setFilterTodo(data)
+  }
   const getData = async () => {
     const data = await getDataAPI()
     setTodo(data.data)
@@ -28,21 +36,25 @@ const App = () => {
     getData()
   }, [])
 
+
   return (
     <div className={s.container}>
-      <Header />
+      <Header onHandler={onHandler} />
       <NavBar />
       <div className={s.contentContainer}>
         <div>
-          <AddTodo getData={getData} />
-          <TodoList todo={todo}
+          <AddTodo getData={getData}
+            filterTodo={filterTodo}
+            setFilterTodo={setFilterTodo}
+          />
+          <TodoList filterTodo={filterTodo}
             setTodo={setTodo}
             getData={getData}
             deleteTodoItem={deleteTodoItem}
             toggleCompleted={toggleCompleted} />
         </div>
         <div>
-          <CompletedTodo todo={todo}
+          <CompletedTodo filterTodo={filterTodo}
             deleteTodoItem={deleteTodoItem}
             toggleCompleted={toggleCompleted} />
         </div>
